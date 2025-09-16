@@ -1,0 +1,46 @@
+[package]
+name = "rs-parquet2parquet"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+
+[dependencies.arrow]
+version = "56"
+default-features = false
+features = [
+]
+
+
+[dependencies.parquet]
+version = "56"
+default-features = false
+features = [
+	"arrow",
+	"brotli",
+	"flate2-zlib-rs",
+	"lz4",
+	"simdutf8",
+	"snap",
+	"zstd",
+	"clap",
+	"flate2",
+]
+
+[dependencies.clap]
+version = "4"
+default-features = false
+features = [
+	"color",
+	"error-context",
+	"help",
+	"std",
+	"suggestions",
+	"usage",
+	"derive",
+]
